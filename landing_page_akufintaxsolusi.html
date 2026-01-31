@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akufintek Solusi - Partner Strategis Bisnis Anda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section - Beranda */
+        .hero-section {
+            background-image: url('https://i.imgur.com/2AI9Fsy.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .tagline {
+            color: #f1f5f9;
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .main-headline {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .main-headline .orange {
+            color: #f59e0b;
+        }
+
+        .main-headline .white {
+            color: #f1f5f9;
+        }
+
+        .sub-headline {
+            color: #f1f5f9;
+            font-size: 14px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-button img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* Banner Images */
+        .banner-full {
+            width: 100%;
+            display: block;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #0a2540;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #0a2540;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-title {
+            color: #f1f5f9;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-list {
+            color: #f1f5f9;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 20px;
+        }
+
+        .blog-card-title {
+            color: #0a2540;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Full Page Sections */
+        .full-page {
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-header {
+            background: #0a2540;
+            padding: 20px;
+        }
+
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .page-nav-links a {
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Blog Article Page */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .article-title {
+            font-size: 28px;
+            color: #0a2540;
+            margin-bottom: 30px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .article-content {
+            color: #333;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .article-content h2 {
+            color: #0a2540;
+            margin: 30px 0 15px;
+            font-size: 22px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-cta {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .article-cta-button {
+            display: inline-block;
+            background: #2E7D32;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .article-cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0a2540;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: #2E7D32;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .submit-button:hover {
+            transform: scale(1.02);
+        }
+
+        .success-message {
+            display: none;
+            background: #2E7D32;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Hidden Sections */
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .main-headline {
+                font-size: 24px;
+            }
+
+            .hero-content {
+                padding: 60px 20px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .services-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-nav-links {
+                gap: 15px;
+            }
+
+            .article-title {
+                font-size: 22px;
+            }
+
+            .article-image {
+                height: 250px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HALAMAN BERANDA -->
+    <section id="beranda" class="hero-section">
+        <div class="hero-overlay">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#paket-layanan">Paket Layanan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="hero-content">
+                <p class="tagline">Bukan Sekadar Konsultan — Kami adalah Partner Strategis Bisnis Anda</p>
+                
+                <h1 class="main-headline">
+                    <span class="orange">RAM</span><span class="white">AH, TER</span><span class="orange">JANGKAU</span><span class="white">, </span><span class="orange">SOL</span><span class="white">UTIF</span>
+                </h1>
+
+                <p class="sub-headline">
+                    Anda tidak perlu merekrut accounting staff full-time yang mahal. Dapatkan expertise level senior dengan fleksibilitas freelance.
+                </p>
+
+                <a href="https://wa.me/6287733665006?text=Halo!%20Saya%20ingin%20konsultasi%20mengenai%20perapihan%20laporan%20keuangan%20dan%20pajak%20usaha%20saya.%20Mohon%20infonya." target="_blank" class="cta-button">
+                    <img src="https://i.imgur.com/jXhrSti.jpeg" alt="Hubungi Kami Sekarang">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 1 -->
+    <img src="https://i.imgur.com/s8JzdrE.jpeg" alt="Banner 1" class="banner-full">
+
+    <!-- Banner 2 -->
+    <img src="https://i.imgur.com/XYxIOmf.jpeg" alt="Banner 2" class="banner-full">
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h2 class="section-title">LAYANAN</h2>
+        <p class="section-description">
+            Kami dengan pengalaman lebih dari 15 tahun langsung mengelola akuntansi dan perpajakan di berbagai industri — dari korporasi besar, perusahaan menengah, koperasi, hingga UMKM — akan memberikan layanan yang memahami tantangan bisnis Anda dari perspektif orang dalam
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://i.imgur.com/Rijj4e0.jpeg" alt="Pembukuan & Layanan Jasa Akuntansi">
+                <div class="service-content">
+                    <h3 class="service-title">Pembukuan & Layanan Jasa Akuntansi</h3>
+                    <div class="service-list">
+                        1. Input transaksi keuangan<br>
+                        2. Rekonsiliasi bank<br>
+                        3. Membuat laporan laba rugi dan neraca
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://i.imgur.com/NMPylUj.jpeg" alt="Layanan Jasa Pajak">
+                <div class="service-content">
+                    <h3 class="service-title">Layanan Jasa Pajak</h3>
+                    <div class="service-list">
+                        1. Hitung dan lapor pajak bulanan (PPh 21, 23, PPN)<br>
+                        2. Lapor SPT Tahunan<br>
+                        3. Konsultasi pajak sederhana
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://i.imgur.com/KgpS7N1.jpeg" alt="Pelaporan Keuangan">
+                <div class="service-content">
+                    <h3 class="service-title">Pelaporan Keuangan</h3>
+                    <div class="service-list">
+                        1. Membuat laporan keuangan manajemen<br>
+                        2. Dashboard keuangan di Excel/Google Sheets<br>
+                        3. Analisis sederhana
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h2 class="section-title">BLOG</h2>
+        <div class="blog-grid">
+            <div class="blog-card" onclick="showArticle('article1')">
+                <img src="https://i.imgur.com/wusVpSe.jpeg" alt="Artikel 1">
+                <div class="blog-card-content">
+                    <h3 class="blog-card-title">5 Langkah Navigasi Coretax 2026 agar Bisnis Aman dari Denda</h3>
+                </div>
+            </div>
+
+            <div class="blog-card" onclick="showArticle('article2')">
+                <img src="https://i.imgur.com/WuJ6hsB.jpeg" alt="Artikel 2">
+                <div class="blog-card-content">
+                    <h3 class="blog-card-title">7 Cara Kelola Pajak Freelancer & Kreator agar Bebas Denda 2026</h3>
+                </div>
+            </div>
+
+            <div class="blog-card" onclick="showArticle('article3')">
+                <img src="https://i.imgur.com/dOhbuU9.jpeg" alt="Artikel 3">
+                <div class="blog-card-content">
+                    <h3 class="blog-card-title">3 Alasan Otomasi Laporan Keuangan Wajib untuk UMKM di 2026</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Alamat -->
+    <img src="https://i.imgur.com/jiS9hmt.jpeg" alt="Banner Alamat" class="banner-full">
+
+    <!-- HALAMAN TENTANG -->
+    <section id="tentang" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#beranda" onclick="showSection('beranda')">Beranda</a>
+                    <a href="#blog" onclick="showSection('blog')">Blog</a>
+                </div>
+            </div>
+        </div>
+        <img src="https://i.imgur.com/FKtF1o9.jpeg" alt="Tentang Kami" class="banner-full">
+        <img src="https://i.imgur.com/s8JzdrE.jpeg" alt="Banner Nilai" class="banner-full">
+        <img src="https://i.imgur.com/fJeUgka.jpeg" alt="Banner Prinsip" class="banner-full">
+        <img src="https://i.imgur.com/jiS9hmt.jpeg" alt="Banner Alamat" class="banner-full">
+    </section>
+
+    <!-- HALAMAN BLOG -->
+    <section id="blog" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#beranda" onclick="showSection('beranda')">Beranda</a>
+                    <a href="#paket-layanan" onclick="showSection('paket-layanan')">Paket Layanan</a>
+                </div>
+            </div>
+        </div>
+        <img src="https://i.imgur.com/YFajlen.jpeg" alt="Banner Blog" class="banner-full">
+        
+        <div class="blog-section" style="background: white;">
+            <div class="blog-grid">
+                <div class="blog-card" onclick="showArticle('article1')">
+                    <img src="https://i.imgur.com/wusVpSe.jpeg" alt="Artikel 1">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">5 Langkah Navigasi Coretax 2026 agar Bisnis Aman dari Denda</h3>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="showArticle('article2')">
+                    <img src="https://i.imgur.com/WuJ6hsB.jpeg" alt="Artikel 2">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">7 Cara Kelola Pajak Freelancer & Kreator agar Bebas Denda 2026</h3>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="showArticle('article3')">
+                    <img src="https://i.imgur.com/dOhbuU9.jpeg" alt="Artikel 3">
+                    <div class="blog-card-content">
+                        <h3 class="blog-card-title">3 Alasan Otomasi Laporan Keuangan Wajib untuk UMKM di 2026</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="https://i.imgur.com/jiS9hmt.jpeg" alt="Banner Alamat" class="banner-full">
+    </section>
+
+    <!-- ARTIKEL 1 -->
+    <section id="article1" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#blog" onclick="showSection('blog')">Kembali ke Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="article-container">
+            <img src="https://i.imgur.com/wusVpSe.jpeg" alt="Artikel 1" class="article-image">
+            <h1 class="article-title">5 Langkah Navigasi Coretax 2026 agar Bisnis Aman dari Denda</h1>
+            <div class="article-content">
+                <p>Dunia perpajakan Indonesia sedang mengalami perubahan besar. Jika dulu kita terbiasa dengan aplikasi yang terpisah-pisah seperti e-Faktur, e-Bupot, dan DJP Online, kini pemerintah resmi menyatukan semuanya dalam satu wadah raksasa bernama Coretax System.</p>
+
+                <p>Bagi Anda pemilik usaha, Coretax bukan sekadar "ganti aplikasi". Ini adalah perubahan cara main. Bayangkan Coretax seperti sistem perbankan modern: semuanya tercatat otomatis, transparan, dan saling terhubung.</p>
+
+                <p>Agar bisnis Anda tidak kaget dan tetap aman dari risiko denda administrasi, berikut adalah panduan sederhana untuk menghadapinya.</p>
+
+                <h2>1. Validasi Data: Fondasi Utama</h2>
+                <p>Coretax sangat bergantung pada data yang akurat. Jika data Anda di sistem lama masih berantakan, maka di sistem baru Anda akan menemui kendala besar saat transaksi.</p>
+                <ul>
+                    <li><strong>Apa yang dilakukan?</strong> Pastikan NIK sudah tervalidasi sebagai NPWP dan data profil di DJP Online sudah sesuai dengan kondisi terbaru (alamat, jenis usaha/KLU, dan email aktif).</li>
+                    <li><strong>Analogi:</strong> Seperti pindah ke rumah baru yang pintunya menggunakan sidik jari; jika sidik jari Anda belum terdaftar, Anda tidak akan bisa masuk.</li>
+                </ul>
+
+                <h2>2. Digitalisasi Pembukuan: Excel Saja Tidak Cukup</h2>
+                <p>Coretax dirancang untuk "membaca" data secara digital. Jika pembukuan Anda masih manual atau hanya mengandalkan tumpukan nota fisik, Anda akan kesulitan melakukan sinkronisasi dengan sistem pemerintah yang kini serba otomatis.</p>
+                <ul>
+                    <li><strong>Tips Praktis:</strong> Mulailah merapikan laporan keuangan bulanan. Pastikan setiap transaksi memiliki bukti yang jelas karena sistem ini akan lebih cepat mendeteksi jika ada ketidaksesuaian data.</li>
+                </ul>
+
+                <h2>3. Pahami Konsep "Deposit Pajak" (Tax Wallet)</h2>
+                <p>Salah satu fitur menarik di Coretax 2026 adalah adanya akun deposit pajak.</p>
+                <ul>
+                    <li><strong>Cara Kerjanya:</strong> Anda bisa menyetorkan sejumlah uang ke akun pajak Anda terlebih dahulu (seperti saldo e-wallet), yang kemudian bisa digunakan untuk membayar berbagai jenis pajak tanpa harus membuat kode Billing berulang kali. Ini sangat memudahkan manajemen arus kas bisnis.</li>
+                </ul>
+
+                <h2>4. Waspadai Integrasi Data Otomatis</h2>
+                <p>Di era Coretax, DJP memiliki akses data yang lebih luas, termasuk data transaksi dari pihak ketiga (bank, marketplace, atau instansi lain).</p>
+                <ul>
+                    <li><strong>Pesan Penting:</strong> Jangan tunggu masalah datang baru mencari solusi. Jika ada perbedaan data antara laporan Anda dengan data yang terekam di sistem, Coretax akan langsung memberikan notifikasi. Ketelitian dalam mencatat omzet adalah harga mati.</li>
+                </ul>
+
+                <h2>5. Jangan Menunda Konsultasi</h2>
+                <p>Karena sistem ini masih baru, banyak detail teknis yang mungkin membingungkan. Mengutak-atik sistem tanpa pemahaman yang benar berisiko menyebabkan salah input yang berujung pada surat teguran atau denda.</p>
+
+                <h2>Kesimpulan</h2>
+                <p>Coretax System 2026 hadir untuk memudahkan kita, bukan mempersulit. Namun, kemudahan itu hanya bisa dinikmati jika kita siap secara administrasi dan teknologi. Dengan persiapan yang matang sejak dini, Anda bisa lebih fokus membesarkan bisnis tanpa perlu cemas dengan urusan perpajakan.</p>
+
+                <div class="article-cta">
+                    <p><strong>Butuh Bantuan Merapikan Laporan Keuangan untuk Persiapan Coretax?</strong></p>
+                    <p>Jangan biarkan bisnis Anda terhambat oleh masalah administrasi. Klik tombol di bawah ini untuk konsultasi langsung via WhatsApp. Kami siap membantu Anda menavigasi pajak dengan tenang dan pasti.</p>
+                    <a href="https://wa.me/6287733665006?text=Halo!%20Saya%20ingin%20konsultasi%20mengenai%20perapihan%20laporan%20keuangan%20dan%20pajak%20usaha%20saya.%20Mohon%20infonya." target="_blank" class="article-cta-button">Chat Konsultasi Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTIKEL 2 -->
+    <section id="article2" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#blog" onclick="showSection('blog')">Kembali ke Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="article-container">
+            <img src="https://i.imgur.com/WuJ6hsB.jpeg" alt="Artikel 2" class="article-image">
+            <h1 class="article-title">7 Cara Kelola Pajak Freelancer & Kreator agar Bebas Denda 2026</h1>
+            <div class="article-content">
+                <p>Dunia perpajakan Indonesia sedang mengalami perubahan besar. Jika dulu kita terbiasa dengan aplikasi yang terpisah-pisah seperti e-Faktur, e-Bupot, dan DJP Online, kini pemerintah resmi menyatukan semuanya dalam satu wadah raksasa bernama Coretax System.</p>
+
+                <p>Bagi Anda pemilik usaha, Coretax bukan sekadar "ganti aplikasi". Ini adalah perubahan cara main. Bayangkan Coretax seperti sistem perbankan modern: semuanya tercatat otomatis, transparan, dan saling terhubung.</p>
+
+                <p>Agar bisnis Anda tidak kaget dan tetap aman dari risiko denda administrasi, berikut adalah panduan sederhana untuk menghadapinya.</p>
+
+                <h2>1. Validasi Data: Fondasi Utama</h2>
+                <p>Coretax sangat bergantung pada data yang akurat. Jika data Anda di sistem lama masih berantakan, maka di sistem baru Anda akan menemui kendala besar saat transaksi.</p>
+                <ul>
+                    <li><strong>Apa yang dilakukan?</strong> Pastikan NIK sudah tervalidasi sebagai NPWP dan data profil di DJP Online sudah sesuai dengan kondisi terbaru (alamat, jenis usaha/KLU, dan email aktif).</li>
+                    <li><strong>Analogi:</strong> Seperti pindah ke rumah baru yang pintunya menggunakan sidik jari; jika sidik jari Anda belum terdaftar, Anda tidak akan bisa masuk.</li>
+                </ul>
+
+                <h2>2. Digitalisasi Pembukuan: Excel Saja Tidak Cukup</h2>
+                <p>Coretax dirancang untuk "membaca" data secara digital. Jika pembukuan Anda masih manual atau hanya mengandalkan tumpukan nota fisik, Anda akan kesulitan melakukan sinkronisasi dengan sistem pemerintah yang kini serba otomatis.</p>
+                <ul>
+                    <li><strong>Tips Praktis:</strong> Mulailah merapikan laporan keuangan bulanan. Pastikan setiap transaksi memiliki bukti yang jelas karena sistem ini akan lebih cepat mendeteksi jika ada ketidaksesuaian data.</li>
+                </ul>
+
+                <h2>3. Pahami Konsep "Deposit Pajak" (Tax Wallet)</h2>
+                <p>Salah satu fitur menarik di Coretax 2026 adalah adanya akun deposit pajak.</p>
+                <p><strong>Cara Kerjanya:</strong> Anda bisa menyetorkan sejumlah uang ke akun pajak Anda terlebih dahulu (seperti saldo e-wallet), yang kemudian bisa digunakan untuk membayar berbagai jenis pajak tanpa harus membuat kode Billing berulang kali. Ini sangat memudahkan manajemen arus kas bisnis.</p>
+
+                <h2>4. Waspadai Integrasi Data Otomatis</h2>
+                <p>Di era Coretax, DJP memiliki akses data yang lebih luas, termasuk data transaksi dari pihak ketiga (bank, marketplace, atau instansi lain).</p>
+                <p><strong>Pesan Penting:</strong> Jangan tunggu masalah datang baru mencari solusi. Jika ada perbedaan data antara laporan Anda dengan data yang terekam di sistem, Coretax akan langsung memberikan notifikasi. Ketelitian dalam mencatat omzet adalah harga mati.</p>
+
+                <h2>5. Jangan Menunda Konsultasi</h2>
+                <p>Karena sistem ini masih baru, banyak detail teknis yang mungkin membingungkan. Mengutak-atik sistem tanpa pemahaman yang benar berisiko menyebabkan salah input yang berujung pada surat teguran atau denda.</p>
+
+                <h2>Kesimpulan</h2>
+                <p>Coretax System 2026 hadir untuk memudahkan kita, bukan mempersulit. Namun, kemudahan itu hanya bisa dinikmati jika kita siap secara administrasi dan teknologi. Dengan persiapan yang matang sejak dini, Anda bisa lebih fokus membesarkan bisnis tanpa perlu cemas dengan urusan perpajakan.</p>
+
+                <div class="article-cta">
+                    <p><strong>Butuh Bantuan Merapikan Laporan Keuangan untuk Persiapan Coretax?</strong></p>
+                    <p>Jangan biarkan bisnis Anda terhambat oleh masalah administrasi. Klik tombol di bawah ini untuk konsultasi langsung via WhatsApp. Kami siap membantu Anda menavigasi pajak dengan tenang dan pasti.</p>
+                    <a href="https://wa.me/6287733665006?text=Halo!%20Saya%20ingin%20konsultasi%20mengenai%20perapihan%20laporan%20keuangan%20dan%20pajak%20usaha%20saya.%20Mohon%20infonya." target="_blank" class="article-cta-button">Chat Konsultasi Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTIKEL 3 -->
+    <section id="article3" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#blog" onclick="showSection('blog')">Kembali ke Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="article-container">
+            <img src="https://i.imgur.com/dOhbuU9.jpeg" alt="Artikel 3" class="article-image">
+            <h1 class="article-title">3 Alasan Otomasi Laporan Keuangan Wajib untuk UMKM di 2026</h1>
+            <div class="article-content">
+                <p>Selama puluhan tahun, Microsoft Excel telah menjadi "sahabat setia" bagi pemilik bisnis dalam mencatat keuangan. Mulai dari catatan pengeluaran harian hingga rekap penjualan bulanan, semuanya masuk ke dalam kolom dan baris.</p>
+
+                <p>Namun, memasuki tahun 2026, tantangan bisnis berubah. Dengan hadirnya sistem pajak Coretax yang serba digital dan persaingan pasar yang semakin cepat, mengandalkan Excel saja kini terasa seperti mengendarai sepeda di jalan tol—masih bisa jalan, tapi sangat berisiko dan tertinggal jauh.</p>
+
+                <p>Mengapa Anda harus mulai mempertimbangkan otomasi laporan keuangan sekarang? Mari kita bahas dengan santai.</p>
+
+                <h2>1. Risiko "Human Error" yang Terlalu Mahal</h2>
+                <p>Pernahkah Anda salah memasukkan satu angka nol, atau tidak sengaja menghapus satu baris rumus, lalu seluruh total laporan Anda jadi berantakan? Di Excel, hal ini sangat mudah terjadi.</p>
+                <ul>
+                    <li><strong>Masalahnya:</strong> Satu kesalahan kecil di pembukuan bisa berujung pada kesalahan laporan pajak. Di era digital sekarang, selisih data sedikit saja bisa memicu surat teguran dari kantor pajak.</li>
+                    <li><strong>Analogi:</strong> Excel itu seperti menulis surat dengan tangan; salah satu huruf saja, Anda harus menghapus atau menulis ulang. Otomasi itu seperti mengetik di komputer dengan auto-correct; sistem akan memberitahu jika ada yang tidak beres.</li>
+                </ul>
+
+                <h2>2. Kecepatan Mengambil Keputusan</h2>
+                <p>Di tahun 2026, data adalah kunci. Jika Anda baru tahu keuntungan bulan Januari di pertengahan Februari karena harus "narik data" manual dari Excel, Anda sudah terlambat.</p>
+                <ul>
+                    <li><strong>Manfaat Otomasi:</strong> Dengan sistem yang terotomasi, laporan keuangan tersedia secara real-time. Anda bisa melihat berapa sisa stok dan berapa saldo kas hari ini hanya dari layar HP.</li>
+                    <li><strong>Pesan Penting:</strong> Bisnis yang sukses bukan yang paling besar, tapi yang paling cepat merespons data.</li>
+                </ul>
+
+                <h2>3. Integrasi Langsung dengan Sistem Pajak (Coretax)</h2>
+                <p>Sistem perpajakan terbaru di Indonesia kini menuntut data yang sinkron. Laporan keuangan yang dibuat secara otomatis biasanya lebih mudah diintegrasikan dengan aplikasi pajak.</p>
+                <p><strong>Tanpa Ribet:</strong> Anda tidak perlu lagi melakukan kerja dua kali (input di buku besar lalu input lagi di web pajak). Sistem otomasi membantu menjembatani data keuangan Anda langsung ke kewajiban lapor pajak.</p>
+
+                <h2>Bagaimana Cara Memulainya bagi UMKM?</h2>
+                <p>Banyak yang mengira otomasi itu mahal dan rumit. Padahal, saat ini sudah banyak layanan yang terjangkau. Langkah termudahnya adalah:</p>
+                <ol>
+                    <li><strong>Gunakan Aplikasi Akuntansi Sederhana:</strong> Pilih yang memiliki fitur sinkronisasi bank.</li>
+                    <li><strong>Digitalisasi Bukti Transaksi:</strong> Foto nota Anda, jangan hanya disimpan di laci.</li>
+                    <li><strong>Gunakan Jasa Profesional:</strong> Seorang akuntan bukan hanya tukang hitung, tapi navigator yang membantu Anda memasang "mesin otomatis" di bisnis Anda.</li>
+                </ol>
+
+                <h2>Kesimpulan</h2>
+                <p>Beralih dari Excel ke otomasi bukan berarti membuang kebiasaan lama, tapi melakukan upgrade untuk keamanan dan kecepatan bisnis Anda. Di tahun 2026, laporan keuangan yang rapi bukan lagi sebuah pilihan, melainkan syarat agar bisnis Anda tetap relevan dan patuh hukum.</p>
+
+                <div class="article-cta">
+                    <p><strong>Ingin Mengubah Pembukuan Excel Anda Menjadi Sistem Otomatis yang Rapi?</strong></p>
+                    <p>Jangan biarkan waktu Anda habis hanya untuk memelototi baris angka di layar. Kami siap membantu Anda membangun sistem laporan keuangan yang modern, akurat, dan siap menghadapi Coretax 2026.</p>
+                    <a href="https://wa.me/6287733665006?text=Halo!%20Saya%20ingin%20konsultasi%20mengenai%20perapihan%20laporan%20keuangan%20dan%20pajak%20usaha%20saya.%20Mohon%20infonya." target="_blank" class="article-cta-button">Chat Konsultasi Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HALAMAN PAKET LAYANAN -->
+    <section id="paket-layanan" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#beranda" onclick="showSection('beranda')">Beranda</a>
+                    <a href="#blog" onclick="showSection('blog')">Blog</a>
+                </div>
+            </div>
+        </div>
+        <img src="https://i.imgur.com/jK0edhu.jpeg" alt="Banner Atas Harga" class="banner-full">
+        <img src="https://i.imgur.com/erXwCEZ.jpeg" alt="Banner Harga Layanan" class="banner-full">
+        <img src="https://i.imgur.com/4RRa5xo.jpeg" alt="Banner CTA" class="banner-full">
+        <img src="https://i.imgur.com/jiS9hmt.jpeg" alt="Banner Alamat" class="banner-full">
+    </section>
+
+    <!-- HALAMAN KONTAK -->
+    <section id="kontak" class="full-page hidden">
+        <div class="page-header">
+            <div class="page-nav">
+                <div class="logo">
+                    <img src="https://i.imgur.com/jIN3n3Y.png" alt="Akufintek Solusi" style="height: 50px;">
+                </div>
+                <div class="page-nav-links">
+                    <a href="#beranda" onclick="showSection('beranda')">Beranda</a>
+                    <a href="#blog" onclick="showSection('blog')">Blog</a>
+                </div>
+            </div>
+        </div>
+        <img src="https://i.imgur.com/YeTjZlf.jpeg" alt="Banner Kontak" class="banner-full">
+        
+        <div class="contact-form-section">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/donisantosoakuntan@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Pesan Baru dari Website Akufintek Solusi">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">Nama Lengkap *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">Nomor WhatsApp *</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Contoh: 081234567890">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Jenis Layanan *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Pilih Layanan</option>
+                        <option value="Bookkeeping">Bookkeeping & Layanan Jasa Akuntansi</option>
+                        <option value="Tax">Layanan Jasa Pajak</option>
+                        <option value="Financial Report">Pelaporan Keuangan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Kirim Pesan</button>
+                
+                <div class="success-message" id="successMessage">
+                    Terima kasih, kami akan segera menghubungi Anda!
+                </div>
+            </form>
+        </div>
+
+        <img src="https://i.imgur.com/ZvlpCst.jpeg" alt="Banner Kontak Bawah" class="banner-full">
+    </section>
+
+    <script>
+        // Navigation Functions
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = ['beranda', 'tentang', 'blog', 'paket-layanan', 'kontak', 'article1', 'article2', 'article3'];
+            sections.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.classList.add('hidden');
+                }
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function showArticle(articleId) {
+            showSection(articleId);
+        }
+
+        // Handle navigation clicks
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.includes('onclick')) return;
+                
+                e.preventDefault();
+                const targetId = href.substring(1);
+                
+                if (['beranda', 'tentang', 'blog', 'paket-layanan', 'kontak'].includes(targetId)) {
+                    showSection(targetId);
+                }
+            });
+        });
+
+        // Form Handling - Dual Submission (Email + WhatsApp)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Prepare WhatsApp message
+            const waNumber = '6287733665006';
+            const waText = `Halo Akufintek Solusi!%0A%0ANama: ${name}%0AEmail: ${email}%0AWhatsApp: ${whatsapp}%0AJenis Layanan: ${service}%0A%0APesan:%0A${message}`;
+            
+            // Open WhatsApp in new tab
+            setTimeout(() => {
+                window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
+            }, 500);
+
+            // Form will submit to FormSubmit normally
+            // Show success message after delay
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'block';
+            }, 1000);
+        });
+
+        // Initialize - Show Beranda by default
+        window.addEventListener('load', function() {
+            showSection('beranda');
+        });
+    </script>
+</body>
+</html>
